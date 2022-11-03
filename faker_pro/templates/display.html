@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <title>fake data page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h3>table for people data</h3>
+        <table class="table table-dark table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Name</th>
+                    <th>Mobile</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            {%for i in data%}
+            <tbody>
+                <tr>
+                    <td>{{i.id}}</td>
+                    <td>{{i.name}}</td>
+                    <td>{{i.mobile}}</td>
+                    <td>{{i.loaction}}</td>
+                </tr>
+
+            </tbody>
+            {%endfor%}
+        </table>
+
+        <a href="{%url 'fake'%}"><input type="submit" value="create"></a>
+       
+    </body>
+
+</html>
